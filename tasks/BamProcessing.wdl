@@ -82,7 +82,7 @@ task SortSamSpark {
     docker: gatk_docker
     disks: "local-disk " + disk_size + " HDD"
     bootDiskSizeGb: "15"
-    cpu: "16"
+    cpu: "8"
     memory: "102 GiB"
     preemptible: preemptible_tries
   }

@@ -18,7 +18,7 @@ version 1.0
 #import "../structs/GermlineStructs.wdl"
 
 # Git URL Import
-import "https://raw.githubusercontent.com/gatk-workflows/five-dollar-genome-analysis-pipeline/1.2.0/structs/GermlineStructs.wdl"
+import "https://raw.githubusercontent.com/odoublewen/five-dollar-genome-analysis-pipeline/1.2.0/structs/GermlineStructs.wdl"
 
 # Get version of BWA
 task GetBwaVersion {
@@ -119,7 +119,7 @@ task SamToFastqAndBwaMemAndMba {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
     preemptible: preemptible_tries
     memory: "14 GiB"
-    cpu: "16"
+    cpu: "8"
     disks: "local-disk " + disk_size + " HDD"
   }
   output {
